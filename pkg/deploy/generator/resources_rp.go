@@ -1525,6 +1525,7 @@ func (g *generator) rpVersionStorageAccount() []*arm.Resource {
 			&mgmtstorage.AccountProperties{
 				AllowBlobPublicAccess: to.BoolPtr(false),
 				MinimumTLSVersion:     mgmtstorage.MinimumTLSVersionTLS12,
+				AllowSharedKeyAccess:  to.BoolPtr(false),
 			},
 			map[string]*string{},
 		),
